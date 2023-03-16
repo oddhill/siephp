@@ -47,7 +47,7 @@ class Dimension
 
     /**
      * #OBJEKT
-     * @var Object[]
+     * @var ObjectData[]
      */
     protected $objects;
 
@@ -72,10 +72,10 @@ class Dimension
 
     /**
      * Add object
-     * @param \SIE\Data\Object $object
+     * @param \SIE\Data\ObjectData $object
      * @return Dimension
      */
-    public function addObject(Object $object)
+    public function addObject(ObjectData $object)
     {
         $object->setDimension($this);
         $this->objects[] = $object;
@@ -85,7 +85,7 @@ class Dimension
     /**
      * Get Object with id
      * @param string $id Search for object key
-     * @return \SIE\Data\Object|null
+     * @return \SIE\Data\ObjectData|null
      */
     public function getObject($id = null)
     {
@@ -101,7 +101,7 @@ class Dimension
 
     /**
      * Get objects for this dimension
-     * @return \SIE\Data\Object[]
+     * @return \SIE\Data\ObjectData[]
      */
     public function getObjects()
     {
